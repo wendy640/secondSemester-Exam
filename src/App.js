@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { TextError } from './TextError';
 import './App.css';
+import Counter from './Counter';
+import { ErrorBoundary } from 'react-error-boundary'
+import  Fallback  from './Fallback';
+
 
 function App() {
+  const person={
+    firstname:'joy',
+    lastname:'ben'
+  }
+  const errorHandler=(error,errorInfo)=>{
+    console.log(error,errorInfo)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+		<div className="App">
+			<ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
+				<Counter />
+				{/* uncomment to text for error 
+				<TextError figure={{}} /> */}
+			</ErrorBoundary>
+		</div>
+	)
 }
 
 export default App;
