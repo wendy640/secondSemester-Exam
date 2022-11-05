@@ -1,5 +1,5 @@
-import wrg from './asset/error.png'
-import { Link } from 'react-router-dom'
+import wrg from '../asset/error.png'
+
  const Fallback = () => {
 	return (
 		<div

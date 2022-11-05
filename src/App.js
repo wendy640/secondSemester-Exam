@@ -1,9 +1,12 @@
-import { TextError } from './TextError';
+import { Routes,Route } from 'react-router-dom';
+import { TextError } from './Components/TextError';
 import './App.css';
-import Counter from './Counter';
+import Counter from './Components/UseReducer';
 import { ErrorBoundary } from 'react-error-boundary'
-import  Fallback  from './Fallback';
-
+import  Fallback  from './Components/Fallback';
+import  CustomHook from './Components/CustomHook';
+import Navbar from './Components/Navbar';
+import NoPage from './Components/NoPage';
 
 function App() {
   const person={
@@ -14,13 +17,18 @@ function App() {
     console.log(error,errorInfo)
   }
   return (
-		<div className="App">
+		<>
 			<ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}>
-				<Counter />
-				{/* uncomment to text for error 
+				<Navbar />
+				<Routes>
+					<Route path="/" element={<Counter />} />
+					<Route path="hook" element={<CustomHook />} />
+					<Route path="*" element={<NoPage />} />
+					{/* uncomment to text for error 
 				<TextError figure={{}} /> */}
+				</Routes>
 			</ErrorBoundary>
-		</div>
+		</>
 	)
 }
 
