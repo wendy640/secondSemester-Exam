@@ -1,9 +1,9 @@
 import React from 'react'
 import msg from '../asset/404.png'
-import { useNavigate } from 'react-router-dom'
+
 
 const NoPage = () => {
-	const navigate = useNavigate()
+	
 	return (
 		<>
 			<div
