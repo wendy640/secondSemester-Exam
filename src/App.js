@@ -1,5 +1,5 @@
 import { Routes,Route } from 'react-router-dom';
-import { TextError } from './Components/TextError';
+// import { TextError } from './Components/TextError';
 import './App.css';
 import Counter from './Components/UseReducer';
 import { ErrorBoundary } from 'react-error-boundary'
@@ -9,10 +9,10 @@ import Navbar from './Components/Navbar';
 import NoPage from './Components/NoPage';
 
 function App() {
-  const person={
-    firstname:'joy',
-    lastname:'ben'
-  }
+  // const person={
+  //   firstname:'joy',
+  //   lastname:'ben'
+  // }
   const errorHandler=(error,errorInfo)=>{
     console.log(error,errorInfo)
   }
