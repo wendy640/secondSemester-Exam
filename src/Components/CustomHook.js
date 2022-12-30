@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import '../index.css'
-
+import vacuum from '../asset/vacuum.png'
 export default function CustomHook() {
-	const [value, setValue] = useState(0)
-
+	const [value, setValue] = useState(0);
+const [id, setid] = useState(548896);
+const [vat, setvat] = useState(879);
+const [nok, setnok] = useState(4395)
 	const increase = () => {
 		setValue(value + 1)
 	}
@@ -22,19 +24,49 @@ export default function CustomHook() {
 
 	return (
 		<div className="app">
-			<h2>Counter App</h2>
-			<div className="counter-value">
-				<strong>{value}</strong>
-			</div>
-			<div className="buttons">
-				<div>
-					<button onClick={() => increase()}>+</button>
+			<div className="container">
+				<div className="title">
+					<h2>Your shopping cart</h2>
+					<p>ID:{id}</p>
 				</div>
 				<div>
-					<button onClick={() => decrease()}>-</button>
-				</div>
-				<div>
-					<button onClick={() => reset()}>0</button>
+					<img src={vacuum} alt="vacuum" />
+
+					<p className="display">
+						Ecovacs Deebot OZMO N8 + robot <br /> vacuum cleaner W125978483
+					</p>
+
+					<button className="stock">In stock</button>
+
+					<div className="buttons">
+						<button className="negative" onClick={() => decrease()}>
+							-
+						</button>
+
+						<button className="value">{value}</button>
+
+						<button className="positive" onClick={() => increase()}>
+							+
+						</button>
+
+						<button className="reset" onClick={() => reset()}>
+							Reset
+						</button>
+					</div>
+					<hr />
+
+					<div className="row">
+						<div className="column">
+							<p className="type">Standard package</p>
+							<p className="type">Total VAT</p>
+							<p className="type">Total NOK</p>
+						</div>
+						<div className="column">
+							<h3>Free</h3>
+							<h3>{vat},-</h3>
+							<h3>{nok},-</h3>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

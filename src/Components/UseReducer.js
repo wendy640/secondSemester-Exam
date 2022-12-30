@@ -1,7 +1,11 @@
-import React,{useReducer} from 'react'
-
+import React,{useReducer,useState} from 'react'
+import vacuum from '../asset/vacuum.png'
 import '../index.css'
+
 const Counter = () => {
+	const [id, setid] = useState(548896)
+	const [vat, setvat] = useState(879)
+	const [nok, setnok] = useState(4395)
   const initialState = {
 		firstCounter: 0
  }
@@ -23,23 +27,57 @@ const Counter = () => {
  
   return (
 		<div className="app">
-			<h2>Counter App</h2>
-			<div className="counter-value">
-				<strong>{count.firstCounter}</strong>
-			</div>
-			<div className="buttons">
-				<div>
-					<button onClick={() => dispatch({ type: 'increment', value: 1 })}>
-						Increment
-					</button>
+			<div className="container">
+				<div className="title">
+					<h2>Your shopping cart</h2>
+					<p>ID:{id}</p>
 				</div>
 				<div>
-					<button onClick={() => dispatch({ type: 'decrement', value: 1 })}>
-						Decrement
-					</button>
-				</div>
-				<div>
-					<button onClick={() => dispatch({ type: 'reset' })}>Reset</button>
+					<img src={vacuum} alt="vacuum" />
+
+					<p className="display">
+						Ecovacs Deebot OZMO N8 + robot <br /> vacuum cleaner W125978483
+					</p>
+
+					<button className="stock">In stock</button>
+
+					<div className="buttons">
+						<button
+							className="negative"
+							onClick={() => dispatch({ type: 'decrement', value: 1 })}
+						>
+							-
+						</button>
+
+						<button className="value">{count.firstCounter}</button>
+						<button
+							className="positive"
+							onClick={() => dispatch({ type: 'increment', value: 1 })}
+						>
+							+
+						</button>
+
+						<button
+							className="reset"
+							onClick={() => dispatch({ type: 'reset' })}
+						>
+							Reset
+						</button>
+					</div>
+					<hr />
+
+					<div className="row">
+						<div className="column">
+							<p>Standard package</p>
+							<p>Total VAT</p>
+							<p>Total NOK</p>
+						</div>
+						<div className="column">
+							<h3>Free</h3>
+							<h3>{vat},-</h3>
+							<h3>{nok},-</h3>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

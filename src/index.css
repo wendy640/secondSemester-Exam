@@ -1,88 +1,249 @@
 .app {
-  display: flex;
-  justify-content: center;
+  
+ display: flex;
   flex-direction: column;
- 
+
 position: relative;
   margin: 0 auto;
-  padding: 8px;
-top:8rem;
- background-color:rgb(243, 243, 243);
- box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 45%;
-  border-radius: 35px;
-height:550px
-}
-
-h2 {
   
-  font-size: 50px;
-  font-weight: normal;
+top:8rem;
+ background-color:#fff;
+color: #171D3C;
+  transition: 0.3s;
+  width: 35%;
+  border-radius: 42px;
+height:500px;
+box-shadow: -31px -33px  #B8D4E4;
+
+
+}
+.container{
+margin:27px 45px;
+}
+.title{
+
+
+line-height: 12px;
+text-align: left;
+align-items: left;
+padding-bottom: 2px;
+}
+h2{
+  font-size: 25px;
+}
+p{
+  font-family: 'Poppins';
+ text-align: left;
+ font-size: 18px;
 }
 
+
+img{
+   float: left;
+   padding-right: 14px;
+    padding-top: 4px;
+    border-radius: 70px;
+}
+.stock{
+  background-color: #81BD45;
+  border-radius: 23px;
+  Padding:6px 12px;
+  border-color: #81BD45;
+    border: none;
+  color: white;
+display: flex;
+  align-items:left;
+margin-top: -7px;
+}
+.display{
+ padding-top: 10px;
+}
 .app > * {
-  text-align: center;
-  margin-bottom: 28px;
+ 
+  /* margin-bottom: 28px; */
 }
 
-.counter-value {
-  margin-top: 36px;
-   margin-bottom: 76px;
-  color: #2d2d2d;
-  font-size: 70px;
-}
 
 .buttons {
-  margin: 0 auto;
- 
+
+ padding-top: 10px;
   display: flex;
-  justify-content: center;
+
   
 }
+.positive{
+  margin: 3px;
+  border: 1.63758px solid #E0F2FA;
+ background-color: 
+#E0F2FA;
 
-button {
-  border-radius: 50%;
-  width: 125px;
-  height: 75px;
-  border: none;
-  font-size: 21px;
-  background-color: #2c2f3d;
-  color: white;
-  margin-left: 20px;
-  cursor: pointer;
-font-size: 17px;
+  color:
+#171D3C;
+ border-radius: 5px;
 }
-  @media only screen and (max-width: 950px) {
-  button {
-     width: 80px;
-  height: 60px; 
-  font-size: 13px;
+.negative{
+  font-size: bolder;
+   margin: 3px;
+ background-color: 
+#E0F2FA;
+ border: 1.63758px solid #E0F2FA;
+  color:
+#171D3C;
+ border-radius: 5px;
+}
+.value{
+  margin: 3px;
+  
+   border: 1.63758px solid #C6CAD2;
+   background-color: 
+#fff;
+ border-radius: 5px;
+}
+.reset{
+    margin: 5px;
+    border: 1.63758px solid #C6CAD2;
+   background-color: 
+#fff;
+ border-radius: 5px;
+}
+hr{
+
+height: 2px;
+margin-top: 25px;
+background: #C6C9D2;
+border-radius: 11px;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#light .app {
+  background-color: #fff;
+ 
+}
+
+#dark .app {
+  background-color: #1c1c19;
+   color: #fff;
+   box-shadow: -31px -33px  #8a959b;
+}
+
+@media only screen and (max-width: 1100px) {
+  
+    .title{
+
+
+line-height: 6px;
+
+padding-bottom: 0px;
+}
+h2{
+  font-size: 18px;
+}
+h3{
+  font-size: 17px;
+}
+.display{
+ 
+ font-size: 12px;
+}
+
+p{
+  font-size: 15px; 
+}
+
   }
+
+  @media only screen and (max-width: 730px) {
+  hr{
+    margin-top: 16px;
+  }
+  p{
+  font-size: 12px; 
+  
+}
+h3{
+  font-size: 14px;
+}
+h2{
+  font-size: 12px;
+}
+
 }
  @media only screen and (max-width: 650px) {
 
-     button {
-     width: 50px;
-  height: 50px; 
-  font-size: 8px;
-   
-  }
-  h2{
-    font-size: 28px 
-  }
-}
+ }
 @media only screen and (max-width: 470px) {
-
-     button {
-     width: 42px;
-  height: 40px; 
+  .app{
+    top: 11rem
+  }
+  .container{
+margin:15px 25px;
+justify-content: center;
+}
+h2{
+line-height: 12px;
+  font-size: 12px;
+ text-align: center;
+}
+img{
+ margin-left: 20px;
+ width: 70px;
+   padding-top: 5px;  
+}
+p{
+  padding-bottom:1px;
+  text-align: center;
+}
+.stock{
+   border-radius: 23px;
+justify-content: center;
+font-size: 9px;
+ width: 70px;
+  margin-left: 15px;
+ /* padding-left: 18px; */
+}
+.positive{
+  margin: 1px;
+  font-size: 10px;
+}
+.reset{
+  margin: 1px;
   font-size: 7px;
-  margin-left: 4px;
-  }
-  h2{
-    font-size: 20px 
-  }
+}
+.negative{
+ margin:1px;
+  font-size: 10px;
+}
+.value{
+  margin: 1px;
+  font-size: 10px;
+}
+h3{
+  font-size: 12.5px;
+  padding-bottom: 15px;
+    padding-left: 6px;
+}
+.type{
+ font-size: 10px;
+}
+
 }
 
 button:hover {

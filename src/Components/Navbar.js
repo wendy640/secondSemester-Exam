@@ -38,6 +38,8 @@ export default function Navbar() {
 				classNames="NavAnimation"
 				unmountOnExit
 			>
+			
+
 				<nav className="Nav">
 					<Link to="/">Counter 1</Link>
 					<Link to="/hook">Counter 2</Link>
