@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 import '../index.css'
 import vacuum from '../asset/vacuum.png'
 export default function CustomHook() {
@@ -6,6 +6,7 @@ export default function CustomHook() {
 const [id, setid] = useState(548896);
 const [vat, setvat] = useState(879);
 const [nok, setnok] = useState(4395)
+
 	const increase = () => {
 		setValue(value + 1)
 	}
@@ -21,7 +22,12 @@ const [nok, setnok] = useState(4395)
 	const reset = () => {
 		setValue(0)
 	}
-
+useEffect(() => {
+	
+	console.log(setid)
+	console.log(setnok)
+	console.log(setvat)
+},[])
 	return (
 		<div className="app">
 			<div className="container">

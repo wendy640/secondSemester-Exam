@@ -1,4 +1,4 @@
-import React,{useReducer,useState} from 'react'
+import React,{useReducer,useState,useEffect} from 'react'
 import vacuum from '../asset/vacuum.png'
 import '../index.css'
 
@@ -24,7 +24,11 @@ const Counter = () => {
  }
 
  const[count,dispatch]= useReducer(reducer,initialState)
- 
+ useEffect(() => {
+		console.log(setid)
+		console.log(setnok)
+		console.log(setvat)
+ }, [])
   return (
 		<div className="app">
 			<div className="container">
