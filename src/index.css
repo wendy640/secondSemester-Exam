@@ -10,7 +10,7 @@ top:8rem;
  background-color:#fff;
 color: #171D3C;
   transition: 0.3s;
-  width: 35%;
+  width: 40%;
   border-radius: 42px;
 height:500px;
 box-shadow: -31px -33px  #B8D4E4;
@@ -191,7 +191,8 @@ h2{
  }
 @media only screen and (max-width: 470px) {
   .app{
-    top: 11rem
+    top: 11rem;
+    width:50%
   }
   .container{
 margin:15px 25px;
