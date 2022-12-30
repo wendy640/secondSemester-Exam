@@ -72,9 +72,9 @@ const Counter = () => {
 
 					<div className="row">
 						<div className="column">
-							<p>Standard package</p>
-							<p>Total VAT</p>
-							<p>Total NOK</p>
+							<p className="type">Standard package</p>
+							<p className="type">Total VAT</p>
+							<p className="type">Total NOK</p>
 						</div>
 						<div className="column">
 							<h3>Free</h3>

@@ -192,11 +192,13 @@ h2{
 @media only screen and (max-width: 470px) {
   .app{
     top: 11rem;
-    width:50%
+    width:60%;
+  height: 400px;
   }
   .container{
-margin:15px 25px;
+margin:13px 27px;
 justify-content: center;
+
 }
 h2{
 line-height: 12px;
@@ -204,42 +206,49 @@ line-height: 12px;
  text-align: center;
 }
 img{
+  float: none;
  margin-left: 20px;
  width: 70px;
-   padding-top: 5px;  
+   margin-bottom:-20px;  
 }
 p{
-  padding-bottom:1px;
+  margin-bottom:5px;
   text-align: center;
 }
+
 .stock{
    border-radius: 23px;
 justify-content: center;
 font-size: 9px;
  width: 70px;
-  margin-left: 15px;
+ margin-top: 4px;
+  margin-left: 48px;
  /* padding-left: 18px; */
 }
 .positive{
-  margin: 1px;
-  font-size: 10px;
+  margin: 4px;
+  font-size: 14px;
 }
 .reset{
-  margin: 1px;
-  font-size: 7px;
+  margin: 9px;
+  font-size: 10px;
 }
 .negative{
- margin:1px;
-  font-size: 10px;
+ margin:4px;
+  font-size: 14px;
 }
 .value{
-  margin: 1px;
-  font-size: 10px;
+  margin: 4px;
+  font-size: 14px;
 }
 h3{
   font-size: 12.5px;
-  padding-bottom: 15px;
+  padding-bottom: 2px;
     padding-left: 6px;
+}
+hr{
+   margin-top: 7px;
+ margin-bottom: -11px;
 }
 .type{
  font-size: 10px;
